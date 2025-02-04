@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Nadella - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        
+        /* style.css - Common Styles for all pages (including projects) */
+        /* ... (All the CSS code from my previous response goes here) ... */
+
+        /* Enhancements for projects Placement and Styling */
+        .projects {
+            padding: 40px; /* Increased padding around the projects section */
+            text-align: center; /* Center the projects heading */
+        }
+
+        .projects h2 {
+            margin-bottom: 30px; /* Added margin below the heading */
+            font-size: 2.5rem; /* Increased heading size */
+            color: #333; /* Darker heading color */
+        }
+
+        .project-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 20px auto; /* Center the cards horizontally */
+            max-width: 400px; /* Set a maximum width for the cards */
+        }
+
+        .project-item:hover {
+            transform: translateY(-15px); /* Increased hover lift */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+        }
+
+        .project-item img {
+            height: 250px; /* Slightly increased image height */
+        }
+
+        .project-item h3 {
+            font-size: 1.8rem; /* Increased title size */
+            margin-bottom: 10px; /* Added margin below the title */
+        }
+
+        .project-item p {
+            font-size: 1.1rem; /* Slightly increased font size for description */
+            color: #555; /* Slightly darker description color */
+            line-height: 1.7; /* Improved line height for readability */
+        }
+
+        .btn {
+            margin: 20px auto 25px; /* Centered button and added margin */
+            padding: 15px 25px; /* Increased button padding */
+            font-size: 1.3rem; /* Increased button font size */
+        }
+
+        /* Media Query for Responsiveness (Optional - Adjust as needed) */
+        @media (max-width: 768px) {
+            .project-item {
+                max-width: 90%; /* Make cards take up more width on smaller screens */
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile-header">
+                <div class="profile-img-container">
+                    <img src="profile.jpg" alt="Krishna Nadella" class="profile-img-sidebar">
+                </div>
+                <h1 class="profile-name">Krishna Nadella</h1>
+                <p class="profile-role">Web Developer & AI Enthusiast</p>
+
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+918688986581">+91 86889 86581</a></p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:kishnababunadella@gmail.com">kishnababunadella@gmail.com</a></p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+                <a href="projects.html">Projects</a>
+                <a href="certifications.html">certifications</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1XADQ8TiSw/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/KrishnaNadella9" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/krishna-nadella-1bb2502a1" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <section class="projects">
+                <h2>My Projects</h2>
+
+                <div class="project-item">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>This project involves creating a web application using React and Node.js, designed to provide seamless user experience and robust backend functionality.</p>
+                    <a href="project1.zip" download class="btn">Download Project</a>
+                </div>
+
+                <div class="project-item">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Developed an AI-powered chatbot that integrates with websites to assist users with common queries. Built with Python and TensorFlow.</p>
+                    <a href="project2.zip" download class="btn">Download Project</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        </footer>
+</body>
+</html>

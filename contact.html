@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Krishna Nadella</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Contact Page Styling */
+    .contact-section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+
+    .contact-section p {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+      margin-bottom: 30px;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #bdc3c7;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: 0.3s ease;
+      background-color: #f8f9fa;
+      color: #2c3e50;
+    }
+
+    .input-group label {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #7f8c8d;
+      transition: 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .input-group input:focus,
+    .input-group textarea:focus {
+      border-color: #3498db;
+      background-color: white;
+    }
+
+    .input-group input:focus + label,
+    .input-group textarea:focus + label,
+    .input-group input:not(:placeholder-shown) + label,
+    .input-group textarea:not(:placeholder-shown) + label {
+      top: 5px;
+      font-size: 0.8rem;
+      color: #3498db;
+    }
+
+    .contact-form button {
+      width: 100%;
+      background-color: #3498db;
+      color: white;
+      font-size: 1.1rem;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile-header">
+        <div class="profile-img-container">
+          <img src="profile.jpg" alt="Krishna Nadella" class="profile-img-sidebar">
+        </div>
+        <h1 class="profile-name">Krishna Nadella</h1>
+        <p class="profile-role">Web Developer & AI Enthusiast</p>
+        
+        <div class="contact-info">
+          <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+918688986581">+91 86889 86581</a></p>
+          <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:kishnababunadella@gmail.com">kishnababunadella@gmail.com</a></p>
+        </div>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/share/1XADQ8TiSw/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://x.com/KrishnaNadella9" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/krishna-nadella-1bb2502a1" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="contact-section">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or collaboration ideas, feel free to send me a message.</p>
+
+        <form action="https://formspree.io/f/xwpvbqen" method="POST" class="contact-form">
+          <div class="input-group">
+            <input type="text" id="name" name="name" required placeholder=" ">
+            <label for="name">Full Name</label>
+          </div>
+
+          <div class="input-group">
+            <input type="email" id="email" name="email" required placeholder=" ">
+            <label for="email">Email Address</label>
+          </div>
+
+          <div class="input-group">
+            <textarea id="message" name="message" required placeholder=" "></textarea>
+            <label for="message">Your Message</label>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Krishna Nadella. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

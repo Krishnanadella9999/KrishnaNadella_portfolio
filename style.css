@@ -1,0 +1,239 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #00bcd4;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #00e5ff;
+  transform: translateY(-3px);
+}
+
+h1, h2, h3 {
+  color: #00bcd4;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Define variables for sidebar width, gap, and nav styles */
+:root {
+  --sidebar-width: 300px; /* Sidebar width */
+  --gap-width: 20px;      /* Gap between sidebar and main content */
+  --nav-font-size: 1.1rem; /* Increased nav font size */
+  --nav-padding: 15px;      /* Increased nav padding */
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  border-right: 2px solid rgba(0, 188, 212, 0.3);
+  z-index: 10;
+  overflow-y: auto;
+}
+
+/* Profile Section */
+.profile-header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.profile-img-container {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #00bcd4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.profile-img-sidebar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-img-sidebar:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.profile-name:hover {
+  color: #00e5ff;
+}
+
+.profile-role {
+  font-size: 1.1rem;
+  color: #00bcd4;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Navigation Links */
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 25px;
+}
+
+nav a {
+  width: 90%;
+  padding: var(--nav-padding);
+  font-size: var(--nav-font-size);
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 188, 212, 0.2);
+}
+
+nav a:hover {
+  background-color: #00bcd4;
+  color: #222;
+  transform: translateX(5px);
+  border-color: #00bcd4;
+}
+
+/* Social Links */
+.social-links {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  font-size: 1.6rem;
+  color: #00bcd4;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+  color: #fff;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: calc(var(--sidebar-width) + var(--gap-width)); /* Gap between sidebar and main content */
+  padding: 30px;
+  background-color: #222;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  border: 2px solid #00bcd4;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+      width: calc(var(--sidebar-width) * 0.85); /* Sidebar width adjustment for tablets */
+  }
+  .main-content {
+      margin-left: calc(var(--sidebar-width) * 0.85 + var(--gap-width)); /* Adjust margin for tablet screens */
+  }
+  nav a {
+      font-size: calc(var(--nav-font-size) * 0.9); /* Slightly reduce font size on larger tablets */
+      padding: calc(var(--nav-padding) * 0.9); /* Slightly reduce padding too */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      text-align: center;
+      padding: 15px;
+      border-radius: 0;
+      margin-right: 0; /* Remove gap on smaller screens */
+  }
+  .main-content {
+      margin-left: 0; /* Remove margin on smaller screens */
+      padding: 20px;
+  }
+  nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+  }
+  nav a {
+      font-size: 1rem; /* Smaller font size on mobile */
+      padding: 10px; /* Smaller padding on mobile */
+      display: inline-block; /* Ensure correct layout on smaller screens */
+      width: auto;       /* Ensure correct layout on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile-img-container {
+      width: 100px;
+      height: 100px;
+  }
+  .profile-name {
+      font-size: 1.3rem;
+  }
+  .profile-role {
+      font-size: 0.9rem;
+  }
+  .social-links a {
+      font-size: 1.3rem;
+  }
+}
