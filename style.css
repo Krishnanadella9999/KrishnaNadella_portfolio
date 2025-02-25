@@ -41,10 +41,10 @@ h3 {
 
 /* Define variables for sidebar width, gap, and nav styles */
 :root {
-  --sidebar-width: 300px; /* Sidebar width */
-  --gap-width: 20px;      /* Gap between sidebar and main content */
-  --nav-font-size: 1.1rem; /* Increased nav font size */
-  --nav-padding: 15px;      /* Increased nav padding */
+  --sidebar-width: 300px;
+  --gap-width: 20px;
+  --nav-font-size: 1.1rem;
+  --nav-padding: 15px;
 }
 
 /* Sidebar */
@@ -162,14 +162,14 @@ nav a:hover {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-links a:hover {
+social-links a:hover {
   transform: translateY(-5px);
   color: #fff;
 }
 
 /* Main Content */
 .main-content {
-  margin-left: calc(var(--sidebar-width) + var(--gap-width)); /* Gap between sidebar and main content */
+  margin-left: calc(var(--sidebar-width) + var(--gap-width));
   padding: 30px;
   background-color: #222;
   border-radius: 20px;
@@ -180,60 +180,92 @@ nav a:hover {
   margin-top: 20px;
 }
 
+/* Certificates and Projects Section */
+.certificates, .projects {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Individual Certificate or Project Image */
+.certificates img, .projects img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.2);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.certificates img:hover, .projects img:hover {
+  transform: scale(1.05);
+}
+
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
   .sidebar {
-      width: calc(var(--sidebar-width) * 0.85); /* Sidebar width adjustment for tablets */
+    width: calc(var(--sidebar-width) * 0.85);
   }
   .main-content {
-      margin-left: calc(var(--sidebar-width) * 0.85 + var(--gap-width)); /* Adjust margin for tablet screens */
+    margin-left: calc(var(--sidebar-width) * 0.85 + var(--gap-width));
   }
   nav a {
-      font-size: calc(var(--nav-font-size) * 0.9); /* Slightly reduce font size on larger tablets */
-      padding: calc(var(--nav-padding) * 0.9); /* Slightly reduce padding too */
+    font-size: calc(var(--nav-font-size) * 0.9);
+    padding: calc(var(--nav-padding) * 0.9);
   }
 }
 
 @media screen and (max-width: 768px) {
   .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-      text-align: center;
-      padding: 15px;
-      border-radius: 0;
-      margin-right: 0; /* Remove gap on smaller screens */
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    border-radius: 0;
+    margin-right: 0;
   }
   .main-content {
-      margin-left: 0; /* Remove margin on smaller screens */
-      padding: 20px;
+    margin-left: 0;
+    padding: 20px;
   }
   nav {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
   }
   nav a {
-      font-size: 1rem; /* Smaller font size on mobile */
-      padding: 10px; /* Smaller padding on mobile */
-      display: inline-block; /* Ensure correct layout on smaller screens */
-      width: auto;       /* Ensure correct layout on smaller screens */
+    font-size: 1rem;
+    padding: 10px;
+    display: inline-block;
+    width: auto;
+  }
+  .certificates img, .projects img {
+    max-width: 90%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .profile-img-container {
-      width: 100px;
-      height: 100px;
+    width: 100px;
+    height: 100px;
   }
   .profile-name {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
   .profile-role {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
   .social-links a {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
+  }
+  .certificates img, .projects img {
+    max-width: 100%;
+    border-radius: 8px;
   }
 }
