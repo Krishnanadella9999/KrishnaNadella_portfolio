@@ -15,10 +15,16 @@ export default function NeuralBackground({ className = '' }) {
     const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000)
     camera.position.z = 60
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-    renderer.setSize(width, height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
-    mount.appendChild(renderer.domElement)
+    let renderer = null
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+      renderer.setSize(width, height)
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
+      mount.appendChild(renderer.domElement)
+    } catch (err) {
+      console.warn('WebGL initialization skipped:', err)
+      return
+    }
 
     const NODE_COUNT = 130
     const BOUND_X = 70
